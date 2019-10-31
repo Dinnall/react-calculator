@@ -106,9 +106,6 @@ render(){
 
 
          </form>
-            <a href='https://github.com/Dinnall/react-calculator' target='_blank'>
-            <i className="fab fa-github fa-5x"></i>
-          </a>
         </div>
        )
    }
