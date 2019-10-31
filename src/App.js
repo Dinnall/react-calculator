@@ -18,7 +18,7 @@ const Buttons = ({ values, divName, handleButtonClick }) => {
 class App extends Component{
    constructor(){
      super()
-     this.inner = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '.', '0', '=']
+     this.inner = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '.', '=']
      this.operators = ['/', '*', '+', '-']
      this.allowedKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '*', '-', '+', '/', '.', '=', 'Backspace', 'Enter', 'c']
       
@@ -251,6 +251,9 @@ render(){
                 <button value='-' onClick={this.handleButtonClick}>-</button>
               </div>
             </div>
+          <p className='intro-title'>Built by:</p>
+           <br />
+           <p className='intro-title'> Michael Dinnall </p>
           </form>
         </div>
        )
