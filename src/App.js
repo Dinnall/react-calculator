@@ -66,10 +66,45 @@ checkLength = () => {
   }
 
 
+  handleKey = e => {
+    let clickedValue = e.key
+    if (this.allowedKeys.includes(clickedValue)) {
+      this.setState({ clickedValue }, () => {
+        // check expression of each press
+      })
+    }
+  }
+
+  handleButtonClick = e => {
+    e.preventDefault()
+    let clickedValue = e.target.value
+
+    this.setState({ clickedValue }, () => {
+      // check expression of each press
+    })
+  }
+
+
 render(){
+      const { clearOrDelete, expression, value, clickedValue } = this.state
      return (
         <div className='calculator-container' >
          <form className='calculator'>
+            <div className='buttons-container'>
+             <Buttons
+              values={this.inner}
+              divName='numbers'
+              handleButtonClick={this.handleButtonClick} />
+            <div className='operations'>
+              <button value={clearOrDelete} onClick={this.handleButtonClick} >{clearOrDelete}</button>
+              <button value='/' onClick={this.handleButtonClick}>÷</button>
+              <button value='*' onClick={this.handleButtonClick}>x</button>
+              <button value='+' onClick={this.handleButtonClick}>+</button>
+              <button value='-' onClick={this.handleButtonClick}>-</button>
+            </div>
+            </div>
+
+
          </form>
         </div>
        )
