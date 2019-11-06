@@ -24,7 +24,6 @@ In the project directory, you can run:
 
 ```shell
 $ npm install
-- cd in to repo
 $ npm start
 ```
 Runs the app in the development mode.<br />
